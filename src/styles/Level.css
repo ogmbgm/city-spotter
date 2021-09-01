@@ -1,0 +1,86 @@
+#main-level-div {
+  margin: 100px 160px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+#status-div {
+  display: flex;
+  justify-content: space-between;
+}
+
+#zoom-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+#zoom-div button {
+  background-color: #4b244a;
+  margin: 0;
+}
+
+#zoom-div button:hover {
+  background-color: #311831;
+  margin: 0;
+}
+
+#cities-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 42px 20px;
+  height: 63vh;
+}
+
+#cities-div button {
+  margin: 0;
+}
+
+#options-div {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 4;
+  align-items: center;
+  justify-content: space-between;
+  align-self: stretch;
+}
+
+#hint-div {
+  display: flex;
+}
+
+#hint-div button {
+  background-color: #6f1d1b;
+  width: 260px;
+}
+
+#hint-div button:hover {
+  background-color: #401110;
+}
+
+#endgame-div {
+  display: flex;
+  flex-direction: column;
+}
+
+#endgame-div button {
+  background-color: #bf4e30;
+}
+
+#endgame-div button:hover {
+  background-color: #a4482f;
+}
+
+img {
+  width: 63vh;
+}
+
+#level-end-div {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

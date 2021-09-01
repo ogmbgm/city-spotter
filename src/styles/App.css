@@ -1,0 +1,83 @@
+body {
+  font-family: "MSGothic";
+  background-color: #4f7cac;
+  color: #f5f3f5;
+}
+
+h1 {
+  font-size: 120px;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 45px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 35px;
+  margin-bottom: 0px;
+}
+
+button {
+  border: none;
+  width: 200px;
+  display: inline-block;
+  padding: 0.3em 1.2em;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 2em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-size: 25px;
+  color: #f5f3f5;
+  background-color: #2f4b26;
+  text-align: center;
+  transition: all 0.2s;
+  margin-bottom: 20px;
+}
+
+button:hover {
+  background-color: #1e3716;
+}
+
+button:disabled {
+  opacity: 50%;
+}
+
+input {
+  border: 5px solid #2f4b26;
+  border-radius: 100px;
+  height: 50px;
+  width: 300px;
+  display: block;
+  margin-top: 30px;
+  color: #2f4b26;
+  font-size: 25px;
+  padding-left: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  font-size: 30px;
+  width: 300px;
+}
+
+.green {
+  color: #2f4b26;
+}
+
+.light-green {
+  background-color: #159864 !important;
+}
+
+.confetti {
+  left: 50px;
+}
