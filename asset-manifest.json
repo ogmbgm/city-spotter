@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/city-spotter/static/css/main.1e56cfb2.chunk.css",
+    "main.js": "/city-spotter/static/js/main.af4fcfb0.chunk.js",
+    "main.js.map": "/city-spotter/static/js/main.af4fcfb0.chunk.js.map",
+    "runtime-main.js": "/city-spotter/static/js/runtime-main.ee9f11ca.js",
+    "runtime-main.js.map": "/city-spotter/static/js/runtime-main.ee9f11ca.js.map",
+    "static/js/2.8e7fafca.chunk.js": "/city-spotter/static/js/2.8e7fafca.chunk.js",
+    "static/js/2.8e7fafca.chunk.js.map": "/city-spotter/static/js/2.8e7fafca.chunk.js.map",
+    "static/js/3.05837b73.chunk.js": "/city-spotter/static/js/3.05837b73.chunk.js",
+    "static/js/3.05837b73.chunk.js.map": "/city-spotter/static/js/3.05837b73.chunk.js.map",
+    "index.html": "/city-spotter/index.html",
+    "static/css/main.1e56cfb2.chunk.css.map": "/city-spotter/static/css/main.1e56cfb2.chunk.css.map",
+    "static/js/2.8e7fafca.chunk.js.LICENSE.txt": "/city-spotter/static/js/2.8e7fafca.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/city-spotter/static/media/MS Gothic.34c7a5f7.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ee9f11ca.js",
+    "static/js/2.8e7fafca.chunk.js",
+    "static/css/main.1e56cfb2.chunk.css",
+    "static/js/main.af4fcfb0.chunk.js"
+  ]
+}
