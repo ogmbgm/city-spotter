@@ -12,6 +12,8 @@ export default function Level({cityOptions, cityList, back, startRound}) {
   const [totalScore, setTotalScore] = useState(0)
   const [isInLevel, setIsInLevel] = useState(true)
   const [cActive, setCActive] = useState(false)
+  const [showHint, setShowHint] = useState(false)
+  const [hintType, setHintType] = useState("")
 
   useEffect(() => {
     chooseCity()
@@ -50,6 +52,7 @@ export default function Level({cityOptions, cityList, back, startRound}) {
     if(e===currentCity){
       document.getElementById(i).className = "light-green";
       setCActive(true)
+      setShowHint(false)
       setTimeout(() => {
         document.getElementById(i).className = "";
         setCurrentZoom(0)
@@ -86,6 +89,17 @@ export default function Level({cityOptions, cityList, back, startRound}) {
     perspective: "63vh",
     colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"]
   };
+  function showHintLandmark(){
+    setShowHint(true)
+    setHintType('Landmark')
+    setScore(score-250)
+  }
+
+  function showHintSkyline(){
+    setShowHint(true)
+    setHintType('Skyline')
+    setScore(score-200)
+  }
 
   return (
     <div>
@@ -110,10 +124,11 @@ export default function Level({cityOptions, cityList, back, startRound}) {
           <div>
             <h2>Total Score: {totalScore}</h2>
             <div id="hint-div">
-              <button>Landmark Hint</button>
-              <button>Skyline Hint</button>
+              <button onClick={showHintLandmark}>Landmark Hint</button>
+              <button onClick={showHintSkyline}>Skyline Hint</button>
             </div>
           </div>
+          {showHint?<img src={process.env.PUBLIC_URL + "/Cities/"+currentCity+"/"+currentCity+hintType+".png"} id="hint" alt="..."/>:<></>}
           <div id="endgame-div">
             <button onClick={back}>Main Menu</button>
             <button>Restart</button>
