@@ -2,6 +2,7 @@ import '../styles/App.css';
 import '../styles/Level.css';
 import {useState, useEffect} from 'react';
 import Confetti from 'react-dom-confetti';
+import hints from "./hints.json"
 
 export default function Level({cityOptions, cityList, back, startRound}) {
   const [cities, setCities] = useState([])
@@ -32,6 +33,7 @@ export default function Level({cityOptions, cityList, back, startRound}) {
   }
   
   function chooseCity(){
+    console.log(cityPointer)
     let city = cityList[cityPointer]
     setCurrentCity(city)
     setCityPointer(cityPointer+1)
@@ -91,14 +93,26 @@ export default function Level({cityOptions, cityList, back, startRound}) {
   };
   function showHintLandmark(){
     setShowHint(true)
-    setHintType('Landmark')
-    setScore(score-250)
+    setHintType('landmark')
+    setScore(score-200)
   }
 
   function showHintSkyline(){
     setShowHint(true)
-    setHintType('Skyline')
+    setHintType('skyline')
     setScore(score-200)
+  }
+
+  function restart(){
+    setCurrentCity("")
+    setCurrentZoom(0)
+    setCityPointer(0)
+    setScore(500)
+    setTotalScore(0)
+    setShowHint(false)
+    setTimeout(() => {
+      // chooseCity()
+    }, 500);
   }
 
   return (
@@ -128,10 +142,11 @@ export default function Level({cityOptions, cityList, back, startRound}) {
               <button onClick={showHintSkyline}>Skyline Hint</button>
             </div>
           </div>
-          {showHint?<img src={process.env.PUBLIC_URL + "/Cities/"+currentCity+"/"+currentCity+hintType+".png"} id="hint" alt="..."/>:<></>}
+          {/* process.env.PUBLIC_URL + "/Cities/"+currentCity+"/"+currentCity+hintType+".png" */}
+          {showHint?<img src={hints[currentCity][hintType]} id="hint" alt="..."/>:<></>}
           <div id="endgame-div">
             <button onClick={back}>Main Menu</button>
-            <button>Restart</button>
+            <button onClick={restart}>Restart</button>
           </div>
         </div>
         </div>
